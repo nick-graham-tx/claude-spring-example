@@ -11,15 +11,15 @@ A starter for building Spring Boot services with a Spec-Driven Development (SDD)
 
 ## Project Overview
 
-A Spring Boot REST service built and tested with Gradle.
+A Spring Boot REST service built and tested with Maven.
 
-- **Build tool:** Gradle (`./gradlew`)
+- **Build tool:** Maven (`./gradlew`)
 - **Framework:** Spring Boot 4.1.0 (Spring Framework 7), Java 21 — see `build.gradle`
 - **Testing:** JUnit 6.1.0 (Jupiter) + AssertJ
 
 <!-- ADAPT: Replace this paragraph with one or two sentences describing what
      your service actually does. Keep the build/framework facts in sync with
-     build.gradle. -->
+     build.gradl. -->
 
 ## Architecture
 
@@ -103,16 +103,6 @@ Conventions:
 
 Business rules live in `docs/specs/` as markdown, one file per feature (`<feature>.specs.md`). Every rule in a spec has at least one acceptance test. Use `/discover` to turn a feature idea into a spec, then `/accept` and `/tdd` to implement it.
 
-<!-- ADAPT: Change the spec directory if it isn't docs/specs/. The
-     one-rule-one-test invariant is enforced by the spec-compliance agent —
-     keep it. -->
-
-## API Documentation (Swagger/OpenAPI)
-
-springdoc-openapi is included in `build.gradle`. When the app runs, Swagger UI is served at `/swagger-ui.html`, generated automatically from the controllers. Add `@Operation` / `@ApiResponse` annotations for richer descriptions.
-
-<!-- ADAPT: Remove this section and the springdoc dependency in build.gradle if
-     the project doesn't expose a REST API. -->
 
 ## Security
 
